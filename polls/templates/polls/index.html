@@ -1,12 +1,14 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<center><h1>Questions and Answers</h1></center>
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li><br><br>
     {% endfor %}
     </ul>
+    <center><h2><a href="{% url 'polls:ChoiceCreate'%}">Give Answers</a></h2></center>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}

@@ -1,3 +1,5 @@
+<center>
+    <h1>Write answers here</h1>
 <form action="" method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
 	<table>
@@ -7,5 +9,8 @@
 		<td>{{field}}</td>
 	</tr>
 	{%endfor%}
-	<input type="submit" name="" value="Submit">
+	<tr><td>
+	<input type="submit" name="" value="Submit"></td>
+</tr>
 </table>
+</center>
