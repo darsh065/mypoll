@@ -1,0 +1,11 @@
+<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<table>
+	{% for field in form %}
+	<tr>
+		<td>{{field.label_tag}}</td>
+		<td>{{field}}</td>
+	</tr>
+	{%endfor%}
+	<input type="submit" name="" value="Submit">
+</table>
